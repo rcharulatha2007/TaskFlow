@@ -1,0 +1,141 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f5f3ff);
+    color: #1f2937;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 650px;
+    margin: 40px auto;
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    color: #4f46e5;
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.container > p {
+    color: #6b7280;
+    margin-bottom: 28px;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #6366f1;
+}
+
+button {
+    border: none;
+    background: #4f46e5;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #3730a3;
+}
+
+h2 {
+    font-size: 21px;
+    margin: 25px 0 15px;
+}
+
+#taskList {
+    list-style: none;
+}
+
+#taskList li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px;
+    margin-bottom: 10px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    overflow-wrap: anywhere;
+}
+
+.task-title {
+    flex: 1;
+}
+
+.task-title.completed {
+    text-decoration: line-through;
+    color: #9ca3af;
+}
+
+.task-actions {
+    display: flex;
+    gap: 7px;
+}
+
+.task-actions button {
+    padding: 8px 10px;
+}
+
+.delete-btn {
+    background: #dc2626;
+}
+
+.delete-btn:hover {
+    background: #b91c1c;
+}
+
+#message {
+    color: #4f46e5;
+    font-size: 14px;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 22px;
+        margin: 10px auto;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    form button {
+        width: 100%;
+    }
+
+    #taskList li {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
